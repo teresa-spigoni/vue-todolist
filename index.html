@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <title>todo-list</title>
+  </head>
+  <body>
+
+    <div id="root">
+      <!-- header -->
+      <header>
+        <h1>To-do List</h1>
+      </header>
+      <!-- /header -->
+
+      <!-- main -->
+      <main>
+        <input id="items" v-model="listItems" @keyup.enter="submit" placeholder="Nuovo Todo">
+        <button @click="submit">AGGIUNGI</button>
+        <ul>
+          <li v-for="(item, index) in array">{{item}} <i class="fa fa-times" @click="deleteItem(index)"></i></li>
+        </ul>
+      </main>
+      <!-- main -->
+    </div>
+
+    <!-- script -->
+    <script src="js/script.js" charset="utf-8"></script>
+    <!-- script -->
+
+  </body>
+</html>
