@@ -3,29 +3,39 @@
   <head>
     <meta charset="utf-8">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/master.css">
     <title>todo-list</title>
   </head>
   <body>
 
+    <!-- Root -->
     <div id="root">
+
       <!-- header -->
       <header>
-        <h1>To-do List</h1>
+        <h1 class="center">To-do List</h1>
       </header>
       <!-- /header -->
 
       <!-- main -->
       <main>
-        <input id="items" v-model="listItems" @keyup.enter="submit" placeholder="Nuovo Todo">
-        <button @click="submit">AGGIUNGI</button>
+        <div class="center">
+          <input id="items" class="center" v-model="listItems" @keyup.enter="submit" placeholder="New Todo">
+          <button @click="submit">ADD</button>
+        </div>
         <ul>
           <li v-for="(item, index) in array">{{item}} <i class="fa fa-times" @click="deleteItem(index)"></i></li>
         </ul>
       </main>
       <!-- main -->
+
     </div>
+    <!-- /Root -->
 
     <!-- script -->
     <script src="js/script.js" charset="utf-8"></script>

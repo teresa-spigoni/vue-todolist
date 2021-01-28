@@ -6,8 +6,12 @@ new Vue({
   },
   methods: {
     submit: function () {
-      this.array.push(this.listItems);
-      this.listItems = '';
+      if (this.listItems === '') {
+        alert('Enter a new todo');
+      } else {
+        this.array.push(this.listItems);
+        this.listItems = '';
+      }
     },
     deleteItem: function (index) {
       this.array.splice(index, 1);
