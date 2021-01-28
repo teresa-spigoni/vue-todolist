@@ -5,11 +5,14 @@ new Vue({
     array: []
   },
   methods: {
+    capitalize: function(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+    },
     submit: function () {
       if (this.listItems === '') {
         alert('Enter a new todo');
       } else {
-        this.array.push(this.listItems);
+        this.array.push(capitalize(this.listItems));
         this.listItems = '';
       }
     },
