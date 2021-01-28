@@ -12,7 +12,7 @@ new Vue({
       if (this.listItems === '') {
         alert('Enter a new todo');
       } else {
-        this.array.push(capitalize(this.listItems));
+        this.array.push(this.capitalize(this.listItems));
         this.listItems = '';
       }
     },
