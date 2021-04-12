@@ -1,3 +1,4 @@
+/* Utility Classes */
 *{
   box-sizing: border-box;
   margin: 0;
@@ -17,12 +18,14 @@
   text-align: center;
 }
 
+/* Header Classes */
 h1{
   margin: 30px 0;
   font-family: 'Great Vibes', cursive;
   font-size: 60px;
 }
 
+/* Main Classes */
 #items{
   width: 200px;
   margin: 0 10px 20px 0;
@@ -52,7 +55,6 @@ ul li{
   border-bottom: 1px solid #ccc;
   font-family: 'Yusei Magic', sans-serif;
   list-style: none;
-  /* text-transform: capitalize; */
 }
 
 ul li i{
